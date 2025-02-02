@@ -1,5 +1,5 @@
 @extends('master')
 
-@section('konten')
-  <h4>Selamat Datang <b>{{Auth::user()->name}}</b>.</h4>
+@section('home')
+  <h4 class="mt-10">Selamat Datang <b>{{Auth::user()->name}}</b>.</h4>
 @endsection
