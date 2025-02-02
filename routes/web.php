@@ -27,4 +27,4 @@ Route::get('/register', function () {
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
-Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
+Route::post('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
