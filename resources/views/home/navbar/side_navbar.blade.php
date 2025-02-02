@@ -1,20 +1,21 @@
 <div class="flex h-screen drop-shadow-md">
     <!-- Sidebar -->
     <nav class="bg-gray-800 shadow-lg w-60 min-h-auto px-2 py-6">
-        <div class="flex items-center justify-center h-16 border-b border-gray-600">
+        <div class="container flex items-center justify-start h-16 border-b border-gray-600">
             <a href="">
                 <img src="{{ asset('/image/logo.png') }}" 
                 class="rounded-lg drop-shadow-md mb-4" width="60" height="60" alt="Logo">
             </a>
+            <h2 class="container mb-4 text-lg text-slate-200"> Welcome <b>{{Auth::user()->name}}</b></h2>
         </div>
 
         <div class="flex flex-col gap-4 mt-5 text-white">
-            <a href="" class="flex gap-3 px-4 py-2 hover:text-blue-400 {{ request()->routeIs('home') ? 'text-blue-400' : '' }}">
+            <a href="/home" class="flex gap-3 px-4 py-2 hover:text-blue-400 {{ request()->routeIs('home') ? 'text-blue-400' : '' }}">
                 <i class="fas fa-tachometer-alt"></i>
                 Dashboard
             </a>
 
-            <a href="" class="flex gap-3 px-4 py-2 hover:text-blue-400 {{ request()->routeIs('users.index') ? 'text-blue-400' : '' }}">
+            <a href="users" class="flex gap-3 px-4 py-2 hover:text-blue-400 {{ request()->routeIs('users.index') ? 'text-blue-400' : '' }}">
                 <i class="fas fa-users"></i>
                 User
             </a>
