@@ -9,27 +9,27 @@
         </div>
 
         <div class="flex flex-col gap-4 mt-5 text-white">
-            <a href="" class="flex gap-3 px-4 py-2 hover:text-blue-500 {{ request()->routeIs('home.home') ? 'text-blue-400' : '' }}">
+            <a href="" class="flex gap-3 px-4 py-2 hover:text-blue-400 {{ request()->routeIs('home') ? 'text-blue-400' : '' }}">
                 <i class="fas fa-tachometer-alt"></i>
                 Dashboard
             </a>
 
-            <a href="" class="flex gap-3 px-4 py-2 hover:text-blue-500 {{ request()->routeIs('users.index') ? 'text-blue-400' : '' }}">
+            <a href="" class="flex gap-3 px-4 py-2 hover:text-blue-400 {{ request()->routeIs('users.index') ? 'text-blue-400' : '' }}">
                 <i class="fas fa-users"></i>
                 User
             </a>
 
-            <a href="" class="flex gap-3 px-4 py-2 hover:text-blue-500 {{ request()->routeIs('categories.index') ? 'text-blue-400' : '' }}">
+            <a href="" class="flex gap-3 px-4 py-2 hover:text-blue-400 {{ request()->routeIs('categories.index') ? 'text-blue-400' : '' }}">
                 <i class="fas fa-layer-group"></i>
                 Categories
             </a>
 
-            <a href="" class="flex gap-3 px-4 py-2 hover:text-blue-500 {{ request()->routeIs('tasks.index') ? 'text-blue-400' : '' }}">
+            <a href="" class="flex gap-3 px-4 py-2 hover:text-blue-400 {{ request()->routeIs('tasks.index') ? 'text-blue-400' : '' }}">
                 <i class="fas fa-tasks"></i>
                 Task
             </a>
 
-            <a href="" class="flex gap-3 px-4 py-2 hover:text-blue-500 {{ request()->routeIs('assigned.tasks') ? 'text-blue-400' : '' }}">
+            <a href="" class="flex gap-3 px-4 py-2 hover:text-blue-400 {{ request()->routeIs('assigned.tasks') ? 'text-blue-400' : '' }}">
                 <i class="fas fa-clipboard-list"></i>
                 My Assigned Task
             </a>

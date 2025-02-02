@@ -15,14 +15,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
-      body {
-          font-family: 'Outfit', sans-serif;
-      }
+      body {font-family: 'Outfit', sans-serif;}
     </style>
 
   </head>
-  <body>
-    <div class="h-full">
+  <body class="bg-gray-100">
+    <div class="flex h-screen">
       @include('home.navbar.side_navbar')
       <div class="container">
         @include('home.navbar.main_navbar')
