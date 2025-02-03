@@ -25,7 +25,6 @@
       <div class="container">
         @include('home.navbar.main_navbar')
         @yield('users')
-        @yield('category')
         @yield('home')
       </div>
     </div>
