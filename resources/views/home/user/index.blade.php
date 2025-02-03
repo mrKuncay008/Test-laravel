@@ -2,7 +2,7 @@
 @section('users')
     <div class="w-full h-auto overflow-x-hidden border-t flex flex-col">
         <main class="w-full flex-grow p-6">
-            <h1 class="w-full text-3xl text-black pb-6">Users</h1>
+            <h1 class="w-full text-3xl text-black font-semibold pb-6">Users</h1>
 
             <div class="w-full mt-2">
                 <p class="text-xl pb-6 flex items-center">
@@ -29,13 +29,13 @@
                                 <td class="py-4 px-6 border-b border-grey-light">{{ $user->name }}</td>
                                 <td class="py-4 px-6 border-b border-grey-light">admin</td>
                                 <td class="py-4 px-6 border-b border-grey-light">
-                                    <button class="px-4 py-1 text-white font-light tracking-wider bg-green-600 rounded"
+                                    <button class="px-4 py-1 btn btn-warning rounded-lg"
                                     type="button"
                                     onclick="">Edit</button>
                                     <form type="submit" method="POST" style="display: inline" action="" onsubmit="return confirm('Are you sure?')">
                                         @csrf
                                         @method('DELETE')
-                                    <button class="px-4 py-1 text-white font-light tracking-wider bg-red-600 rounded" type="submit">Delete</button>
+                                    <button class="px-4 py-1 btn btn-outline-danger rounded-lg" type="submit">Delete</button>
                                     </form>
                                 </td>
                             </tr>
