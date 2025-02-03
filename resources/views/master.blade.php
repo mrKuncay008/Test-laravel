@@ -24,6 +24,7 @@
       @include('home.navbar.side_navbar')
       <div class="container">
         @include('home.navbar.main_navbar')
+        @yield('users')
         @yield('home')
       </div>
     </div>
