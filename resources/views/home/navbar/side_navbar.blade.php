@@ -6,7 +6,7 @@
                 <img src="{{ asset('/image/logo.png') }}" 
                 class="rounded-lg drop-shadow-md mb-4" width="60" height="60" alt="Logo">
             </a>
-            <h2 class="container mb-4 text-lg text-slate-200"> Welcome <b>{{Auth::user()->name}}</b></h2>
+            <h2 class="container mb-4 text-lg text-slate-200"> Welcome <br><b>{{Auth::user()->name}}</b></h2>
         </div>
 
         <div class="flex flex-col gap-4 mt-5 text-white">
@@ -15,12 +15,12 @@
                 Dashboard
             </a>
 
-            <a href="users" class="flex gap-3 px-4 py-2 hover:text-blue-400 {{ request()->routeIs('users.index') ? 'text-blue-400' : '' }}">
+            <a href="users" class="flex gap-3 px-4 py-2 hover:text-blue-400 {{ request()->routeIs('user') ? 'text-blue-400' : '' }}">
                 <i class="fas fa-users"></i>
                 User
             </a>
 
-            <a href="" class="flex gap-3 px-4 py-2 hover:text-blue-400 {{ request()->routeIs('categories.index') ? 'text-blue-400' : '' }}">
+            <a href="" class="flex gap-3 px-4 py-2 hover:text-blue-400 {{ request()->routeIs('categories') ? 'text-blue-400' : '' }}">
                 <i class="fas fa-layer-group"></i>
                 Categories
             </a>
