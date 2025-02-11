@@ -7,8 +7,8 @@
 for the data sample
 
 ```bash
-artisan db:seed --class=UserSeeder
-artisan db:seed --class=RoleSeeder
+php artisan db:seed --class=UserSeeder
+php artisan db:seed --class=RoleSeeder
 ```
 
 - Run php artisan serve 
