@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light drop-shadow-md">
   <div class="container-fluid w-full   mb-3">
-    <a class="navbar-brand font-weight-bold" href="{{ route('home') }}">Task Management System</a>
+    <a class="navbar-brand font-weight-bold" href="{{ route('home') }}"></a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

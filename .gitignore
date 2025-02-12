@@ -7,6 +7,7 @@
 .env.backup
 composer.lock
 package-lock.json
+docs.for.me.md
 .phpunit.result.cache
 docker-compose.override.yml
 Homestead.json

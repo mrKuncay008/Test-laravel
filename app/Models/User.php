@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Models;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
@@ -42,21 +42,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-     
-//     public function categories()
-//     {
-//         return $this->hasMany(Category::class);
-//     }
-// 
-//     public function createdTasks()
-//     {
-//         return $this->hasMany(Task::class);
-//     }
-// 
-//     public function assignedTasks()
-//     {
-//         return $this->hasMany(Task::class, 'assigned_to_user_id');
-//     }
 
     public function role()
     {
