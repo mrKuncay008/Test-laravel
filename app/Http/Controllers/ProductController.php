@@ -27,8 +27,9 @@ class ProductController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string',
-            'category_product_id' => 'required|exists:category_products,id',
-            'price' => 'required|numeric'
+            'image' => 'required|string',
+            'price' => 'required|numeric',
+            'product_category_id' => 'required|exists:categories,id'
         ]);
 
         $product = $this->productService->create($validated);
@@ -52,8 +53,9 @@ class ProductController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string',
-            'category_product_id' => 'required|exists:category_products,id',
-            'price' => 'required|numeric'
+            'image' => 'required|string',
+            'price' => 'required|numeric',
+            'product_category_id' => 'required|exists:categories,id'
         ]);
 
         $product = $this->productService->update($id, $validated);
