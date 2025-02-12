@@ -1,20 +1,19 @@
 <?php
 
-namespace App\Services\CategoryProduct;
+namespace App\Services\Product;
 
-use App\Repositories\CategoryProduct\CategoryProductRepository;
 use LaravelEasyRepository\Service;
+use App\Repositories\Product\ProductRepository;
 
+class ProductServiceImplement extends Service implements ProductService{
 
-class CategoryProductServiceImplement extends Service implements CategoryProductService
-{
      /**
      * don't change $this->mainRepository variable name
      * because used in extends service class
      */
      protected $mainRepository;
 
-    public function __construct(CategoryProductRepository $mainRepository)
+    public function __construct(ProductRepository $mainRepository)
     {
       $this->mainRepository = $mainRepository;
     }
@@ -42,5 +41,4 @@ class CategoryProductServiceImplement extends Service implements CategoryProduct
     public function delete($id)
     {
         return $this->mainRepository->delete($id);
-    }
-}
+    }}

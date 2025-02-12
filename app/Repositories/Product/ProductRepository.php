@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Services\CategoryProduct;
+namespace App\Repositories\Product;
 
-use LaravelEasyRepository\BaseService;
+use LaravelEasyRepository\Repository;
 
-interface CategoryProductService extends BaseService{
+interface ProductRepository extends Repository{
     public function getAll();
     public function getById($id);
     public function create($data);

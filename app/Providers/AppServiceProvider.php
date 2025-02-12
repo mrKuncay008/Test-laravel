@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\CategoryProduct\CategoriesRepositoryImplement;
+use App\Repositories\CategoryProduct\CategoryProductRepository;
 use App\Services\Login\LoginService;
 use App\Services\Login\LoginServiceImplement;
 use App\Services\Register\RegisterService;
@@ -25,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
         );
         $this->app->bind(RegisterService::class, RegisterServiceImplement::class);
         $this->app->bind(LoginService::class, LoginServiceImplement::class);
+        $this->app->bind(CategoryProductRepository::class, CategoriesRepositoryImplement::class);
     }
 
     /**
