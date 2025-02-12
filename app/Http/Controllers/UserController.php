@@ -23,7 +23,7 @@ class UserController extends Controller
             "Success" => true,
             "Code" => 200,
             "data" => $result,
-            // "Message" => "User found"
+            "Message" => "User found"
         ]);
     }
 }
