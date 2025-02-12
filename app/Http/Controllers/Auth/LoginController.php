@@ -3,39 +3,36 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Services\Login\LoginService;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
-    public function login()
+    private $loginService;
+
+    public function __construct(LoginService $loginService)
     {
-        if (Auth::check()) {
-            return redirect('home');
-        }else{
-            return view('login');
-        }
+        $this->loginService = $loginService;
     }
 
-    public function actionlogin(Request $request)
+    public function login(Request $request)
     {
-        $data = [
-            'email' => $request->input('email'),
-            'password' => $request->input('password'),
-        ];
-
-        if (Auth::Attempt($data)) {
-            return redirect('home');
-        }else{
-            Session::flash('error', 'Email atau Password Salah');
-            return redirect('/');
-        }
+        $credentials = $request->only('email', 'password');
+        return response()->json($this->loginService->login($credentials));
     }
 
-    public function actionlogout()
+    public function logout()
     {
-        Auth::logout();
-        return redirect('/');
+        return $this->loginService->logout();
+    }
+
+    public function refresh()
+    {
+        return response()->json($this->loginService->refresh());
+    }
+    
+    public function me()
+    {
+        return response()->json(auth()->user());
     }
 }

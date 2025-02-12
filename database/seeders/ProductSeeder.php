@@ -23,7 +23,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Product 1',
                 'price' => 10000,
                 'image' => 'product1.jpg',
-                'category_id' => 1, // Pastikan kategori dengan ID ini ada di tabel categories
+                'product_category_id' => 1, // Pastikan kategori dengan ID ini ada di tabel categories
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -31,7 +31,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Product 2',
                 'price' => 15000,
                 'image' => 'product2.jpg',
-                'category_id' => 2, // Pastikan kategori dengan ID ini ada di tabel categories
+                'product_category_id' => 2, // Pastikan kategori dengan ID ini ada di tabel categories
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -39,7 +39,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Product 3',
                 'price' => 20000,
                 'image' => 'product3.jpg',
-                'category_id' => 1, // Pastikan kategori dengan ID ini ada di tabel categories
+                'product_category_id' => 1, // Pastikan kategori dengan ID ini ada di tabel categories
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -51,7 +51,7 @@ class ProductSeeder extends Seeder
                 'name' => $faker->word,
                 'price' => $faker->numberBetween(1000, 50000),
                 'image' => 'product' . $index . '.jpg',
-                'category_id' => $faker->numberBetween(1, 5), // Pilih kategori secara acak
+                'product_category_id' => $faker->numberBetween(1, 5), // Pilih kategori secara acak
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
